@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+	  
+        <!-- Modal -->
+        <div class="modal fade" id="modal-opinion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+
+                <h4 class="modal-title" id="myModalLabel"><b>Opinión del cumplimiento</b></h4>
+              </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="block">
+                            <form class="form-horizontal" enctype="multipart/form-data" id="yw0" action="/pgi_metaldyne/index.php/login/opinion" method="post">
+                            <div class="col-md-12">
+                                <div class="alert alert-danger" id="div_error" style="display: none;">
+                                                                    </div>
+                            </div>
+                            <div class="col-md-12 col-lg-12">
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="opinion_cumplimiento_folio">Folio</label>                                    <div class="col-sm-9">
+                                        <input class="form-control" tabindex="1" name="opinion_cumplimiento[folio]" id="opinion_cumplimiento_folio" type="text" value="" />                                        <span class="asterisc">*</span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="opinion_cumplimiento_fecha_emision">Fecha Emision</label>                                    <div class="col-sm-9">
+                                        <input class="form-control datepicker" tabindex="3" name="opinion_cumplimiento[fecha_emision]" id="opinion_cumplimiento_fecha_emision" type="text" value="" />                                        <span class="asterisc">*</span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">Archivo PDF</label>
+                                    <div class="col-sm-9">
+                                        <div>
+    <input type="text" class="form-control file_upload_image" title="" id="" placeholder="Click">
+    <input type="file" id=""  name="file_opinion" style="display:none" class="file_upload_input" />
+</div>                                        <span class="asterisc">*</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 col-lg-12">
+                                <button type="submit" class="btn btn-primary">Ingresar</button>
+                                <input type="hidden" name="opinion_cumplimiento[id]" id="opinion_cumplimiento_id" value="50" />                            </div>
+                            </form>
+                        </div>
+                       
+                    </div>
+                              </div>
+              <div class="modal-footer">
+<p style='margin: 250px 30px 0 30px;'>Pellentesque habitant <a id="popover" class="btn" rel="popover" data-content="the textual content of the popover is inserted here" title="Heading">Popover button</a> tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+				  
+                <button type="button" class="btn btn-default" data-dismiss="modal">cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript">
+        $('#modal-opinion').modal('show');
+        </script>
+
+
+
+
+
+
+ 
+  </body>
+</html>
