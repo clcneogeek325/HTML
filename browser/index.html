@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Get Version Browser And Version</title>
+		<script src="jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+
+		<p>Display the user-agent header sent by the browser to the server.</p>
+
+		<button onclick="myFunction()">Try it</button>
+
+		<p id="demo"></p>
+
+		<script>
+		function myFunction() {
+			document.getElementById("demo").innerHTML =
+			navigator.userAgent;
+		}
+		</script>
+
+	</body>
+
+</html>
