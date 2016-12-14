@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Ajax Jquery</title>
+	</head>
+	<body>
+		<script src="jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" charset="utf-8">
+$.ajax({
+	url:"http://localhost/anexo24/frontend/web/index.php/apiexpediente",
+	dataType:"json",
+	type:"GET",
+	cache:false,
+	contentType:"application/json",
+	success:function(data){
+		console.log(data);
+	
+	}
+
+
+});
+/*
+$.ajax({
+	url:"http://localhost/apiweb/frontend/web/index.php/api/categoria",
+	dataType:"json",
+	type:"GET",
+	cache:false,
+	contentType:"application/json",
+	success:function(data){
+		console.log(data);
+	}
+});
+
+*/
+		</script>
+	</body>
+</html>
+	
+
