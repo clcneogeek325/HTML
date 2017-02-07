@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Static Top Navbar Example for Bootstrap</title>
+
+		<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+  </head>
+
+  <body>
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="../navbar/">Default</a></li>
+            <li class="active"><a href="./">Static top <span class="sr-only">(current)</span></a></li>
+            <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+
+    <div class="container">
+				<button id="btn_menu"type="button" class="btn btn-default btn-lg">
+				  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				</button>
+
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+				  <h3 class="panel-title">PGI GE</h3>
+				</div>
+				<div class="panel-body" style="overflow:auto;padding:10px">
+						<table class="table table-bordered" > 
+							<thead> 
+								<tr> 
+									<th>Actualizar</th> 
+									<th scope="row">Idcfdi</th> 
+									<th>Idsupplier</th> 
+								</tr> 
+							</thead> 
+							<tbody id="id_lista_pgi"> 
+								</tbody> 
+								
+						 </table> 
+				</div>
+          	</div>
+						<button id="btn_actualizar" class="btn-lg btn-primary btn"><span class="glyphicon glyphicon-plus"></span></button>
+    
+
+    </div> <!-- /container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<script type="text/javascript" charset="utf-8">
+	var contador = 0;
+    $('#btn_actualizar').click(function(){
+       
+            $("#id_lista_pgi").append(" <tr id=\"tr"+contador+"\"><td id=\"id_pgi\">5345345</td><td id=\"id_cfdi1\">101547</td><td id=\"id_cfdi1\">453454 <button id=\"btn_eliminar"+contador+"\" data-id=\""+contador+"\" class=\"btn btn-lg btn-danger btn-delete\"><span class=\"glyphicon glyphicon-remove\"></span></button></td></tr>");
+        contador++;
+    });
+    
+    
+    $('#id_lista_pgi').on('click','.btn-delete',function(){
+        var input_number = $(this).attr('data-id');
+        $("#tr"+input_number).remove();
+    });
+/*
+	$('#btn_actualizar').click(function(){
+		var cuenta  = $('#id_lista_pgi > tr').length;
+			for (var i = 0; i < cuenta; i++) {
+				var id = $('#id_actualizar_pgi'+i);
+				if (id.is(':checked')){
+					console.log("cierto");
+				}else{
+					console.log("falso");
+				}
+			}
+	    });
+*/
+	</script>
+
+  </body>
+</html>
+
